@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+
+
+<title>Document</title>
+</head>
+<body>
+    <img  src="../assets/quizbg1.png" alt="Quiz Logo" class="logo">
+    
+    <div class="main"  > 
+        <div class="image" style="background-image: url('../assets/1077.jpg');">
+        <div class="login">
+            
+            <form [formGroup]="userForm">
+                <h2 class="heading">Quiz Register</h2>
+                
+                <input #name type="name" class="formcontrol" formControlName="username" placeholder="Username"/>
+                <div *ngIf="userForm.controls.username.invalid && (userForm.controls.username.dirty || userForm.controls.username.touched)">
+                  <p>Please fill the box.</p>
+                </div>
+                
+                <button (click)="quizsubmit()" [disabled]="userForm.controls.username.invalid || userForm.controls.username.pristine"
+                  [routerLink]="userForm.controls.username.valid ? '/start' : null">
+                  <p>Register</p>
+                </button>
+              </form>
+              
+        </div>
+        </div>
+        <img style="margin-right: 147px;margin-bottom: 20px;" src="../assets/120.png" alt=""> 
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

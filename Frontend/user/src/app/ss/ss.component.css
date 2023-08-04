@@ -1,0 +1,161 @@
+/* Style for the container of all the cards */
+body {
+    background-attachment: fixed;
+    
+  }
+  .card-container {
+    background-color:whitesmoke;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    margin-bottom: 0%;
+    background-size: cover;
+    background-attachment: fixed;
+    /* overflow: scroll; */
+   /* overflow-x: hidden; */
+  }
+  .card-deck{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 80px;
+    margin-top: 180px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: transitionIn 0.75s;
+    
+  }
+  @keyframes transitionIn {
+    from{
+      opacity:0;
+      transform: rotateX(-10deg);
+    }
+    to{
+      opacity:1;
+      transform: rotateX(0);
+    }
+    
+    }
+
+  .card-body{ 
+    bottom: 20px;
+    width: 200px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    
+  }
+  .card-body:hover{
+    transform: translateY(-10px);
+
+  }
+  
+  .card-title{
+    font-family: 'Instrument Serif', serif;
+    /* font-size: 40px; */
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  
+  }
+  button {
+    margin-left: 10px;
+    background-color: cadetblue;  
+    border-radius: 10px;
+    font-size: 20px;
+   padding: 1px 10px; /* adds 10px of padding to the top and bottom, and 20px of padding to the left and right */
+  }
+  .button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Style for each individual card */
+  .card {
+    width: 350px;
+    height: 200px;
+    background-color: #f4f4f4;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    /* margin-top: 200px; */
+    margin-left: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+   
+  }
+  /* .card:hover {
+    transform: scale(1.05);
+  } */
+
+ 
+  /* navbar design */
+  .navbar {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    /* background-color: black; */
+  
+    height: 100px;
+    width: 1600px;
+    /* position: fixed; */
+    box-shadow: #343a40;
+    /* background-color: #358f80; */
+    
+  }
+  .navbar h1 {
+    font-size: 40px;
+    color: 143601; 
+    margin: 0; 
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Instrument Serif', serif; */
+    font-weight: bold;
+    margin-right: 100px;
+  
+  }
+  
+  .logo {
+      position: absolute;
+      top:-20px;
+      left: -0px;
+      width: 100px;
+      height: 100px;
+    }
+  
+  
+  .container-fluid {
+    max-width: 1200px;
+    margin: auto; /* Center the container horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+    
+
+
+  p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+  }
+  
+  h2{
+    font-weight: bold;
+    font-family: 'Source Serif Pro', serif;
+  }
+  
+  
+  
+  
+  

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,300&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+  
+  <body>
+    <div class="card-container" style="background-image: url('../assets/1077.jpg');">
+      
+      <nav class="navbar">
+        <img src="../assets/quizbg1.png" alt="Quiz Logo" class="logo">
+        
+        <div class="container-fluid"  >
+          
+          <h1> CATEGORIES. </h1>
+          
+        </div>
+      </nav>
+
+      <div class="search-card">
+        <h1 >Welcome {{name}}</h1>
+        <br>
+        <p>On this page you can explore our collection of several trivia questions across various topics & categories.</p>
+        <p>Use the search tool to find a specific set of trivia questions or scroll down to browse quizes, latest trivia and the full list of all our topics & categories</p>
+        <div class="search">
+          <input type="text" placeholder="    Search the Category...." [(ngModel)]="searchText">
+          <button (click)="onSearch()"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div> 
+      </div>
+
+      <div *ngIf="showNoResults" class="noresult"><span>No results found</span></div>
+   
+      
+<div class="card-deck">
+  <div *ngFor="let course of cordata">
+    <button class="card" style="background-image: url('{{course.image}}');
+    " [ngClass]="{'disabled-button': !codata.includes(course.category)}" 
+    [routerLink]="['/ss/' + course.id]">
+      <div class="card-body" >
+        <h3 class="card-title">{{ course.category }}</h3>
+        <br>
+        
+      </div>
+    </button>
+
+  </div>
+
+      </div>
+
+      <!-- <div class="card-deck">
+        <div *ngFor="let course of cordata">
+          <button class="card" style="background-image: url('{{course.image}}');opacity: 90%;"
+              [routerLink]="['/updatedquiz/' + course.id]">
+              <div class="card-body">
+                <h3 class="card-title">{{ course.category }}</h3>
+                <br>
+              </div>
+            </button>
+
+          </div>
+          </div> -->
+
+    </div>
+
+  </body>
+</html>

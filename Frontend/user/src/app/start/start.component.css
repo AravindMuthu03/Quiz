@@ -1,0 +1,135 @@
+/* body{
+  position: fixed;
+  animation: transitionIn 0s;
+  height: 100vh;
+  overflow-y: hidden;
+  
+  width: 100%;
+  
+} */
+
+.cc{
+  height: 120vh;
+  overflow-y: hidden;
+    position: fixed;
+  width: 100%;
+  animation: transitionIn 0s;
+  /* background-color: red; */
+}
+
+@keyframes transitionIn {
+	from{
+	  opacity:0;
+	  transform: rotateX(-5deg);
+	}
+	to{
+	  opacity:10;
+	  transform: rotateX(0);
+	}
+	
+  }
+
+
+
+.resbtn{
+  /* background-color: transparent; */
+  background: transparent;
+  border: 2px solid rgb(105, 234, 239);
+  color:rgb(105, 234, 239);
+  font-weight: bold;
+  border-radius: 5px;
+  background-size: cover;
+  margin-top: 10px;
+  margin-left: 1300px;
+  padding: 10px 30px;
+  animation: beating 1s ease-in-out infinite;
+}
+@keyframes beating {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.logo {
+  position: absolute;
+  top:-68px;
+  left: -850px;
+  width: 200px;
+  height: 200px;
+}
+
+img{
+    margin-left: 800px;
+}
+.card-gh{
+    display: flex;
+    flex-direction: column;
+   justify-content: center; 
+    align-items: center; 
+    height: 870px;
+    width: 740px;
+    margin-top: -750px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 60px;
+    color: whitesmoke;
+}
+p{
+    margin-top: 10px;
+    margin-right: 90px;
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: whitesmoke;
+}
+.h{
+    animation: beating 1s ease-in-out infinite;
+}
+@keyframes beating {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .h h1{
+    margin-right: 255px; color:rgb(105, 234, 239);
+  }
+  .btn {
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-right: 50px;
+    padding: 10px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .btn:hover {
+    background-color: rgb(105, 234, 239);
+    opacity: 90%;
+    
+  }
+
+
+
+

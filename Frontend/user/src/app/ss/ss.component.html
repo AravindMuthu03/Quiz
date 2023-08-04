@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="card-container" style="background-image: url('../assets/1077.jpg');">
+  
+      <nav class="navbar">
+        <img src="../assets/quizbg1.png" alt="Quiz Logo" class="logo">
+        
+        <div class="container-fluid"  >
+          
+          <h1 >DIFFICULTY.</h1>
+          
+        </div>
+      </nav>
+
+    <div class="card-deck" >
+      <div class="card"   *ngFor="let diff of diffdata" >
+      
+        <div class="card-body"  
+        [routerLink]="['/updatedquiz/'+ this.id + '/' + diff.did, ]" > 
+          <h3 class="card-title">{{ diff.difficulty }}</h3>      
+        </div>  
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>

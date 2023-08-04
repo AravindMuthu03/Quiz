@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">	
+</head>
+
+<body>
+
+	<div class="nav">
+		<nav class="navbar">
+			<div class="cat">
+				<img src="../assets/quizbg1.png" alt="Quiz Logo" class="logo">
+			</div>
+
+			<span class="welcome-text">
+				Welcome {{name}}
+			</span>
+
+			<div class="timer">
+				{{counter}} sec
+			</div>
+		</nav>
+	</div>
+	<ng-container *ngIf="!isQuizCompleted">
+		<div class="ff">
+			<div class="card1">
+				<div class="card1-header">
+					<span class="question-count">
+						Question {{currentIndex+1}} of {{questionData.length}}
+					</span>
+					<div class="points">
+						Points {{points}}
+					</div>
+				</div>
+				<div class="question">
+					<div class="q" >
+						
+						<p [innerHTML]="questionData[currentIndex]?.ques"></p>
+
+						<br>
+						<div class="img">
+						<img *ngIf="questionData[currentIndex]?.image && questionData[currentIndex]?.image !== 'undefined'" [src]="questionData[currentIndex]?.image" alt="Question Image" width="500px" height="300px" style="border-radius: 10px;" >
+						</div>
+					</div>
+				</div>
+				<div class="score">
+					Total Marks : 
+				</div>
+			</div>
+			<div class="card2">
+
+				<div class="card2-header">
+					<span class="options-text">Options</span>
+				</div>
+				<div class="option">
+					<ng-container *ngIf="questionData[currentIndex]?.options && questionData[currentIndex]?.options.length > 0; else noOptions">
+						<div class="card" *ngFor="let opt of questionData[currentIndex]?.options" (click)="selectOption(opt)"
+							[ngClass]="{'selected' : selectedOption === opt}">
+						<p style="margin: 5px;">{{opt.option}}</p>
+						</div>
+					</ng-container>
+					<ng-template #noOptions>
+						<textarea [(ngModel)]="textareaText" class="custom-textarea"></textarea>
+					</ng-template>
+				</div>
+				<div class="button-container">
+					<button *ngIf="(selectedOption || textareaText) && currentIndex !== questionData.length - 1" (click)="nextQuestion()" class="btn">
+						<div class="card gh">
+							<span>NEXT <i class="fa text-success fa-chevron-right fa-1x" aria-hidden="true"></i></span>
+						</div>
+					</button>
+					<button *ngIf="(selectedOption || textareaText) && currentIndex === questionData.length - 1" (click)="quizSubmit()" class="btn">
+						<div class="card gh">
+							<span>SUBMIT <i class="fa text-success fa-chevron-right fa-1x" aria-hidden="true"></i></span>
+						</div>
+					 </button>
+				</div>
+			</div>
+		</div>
+	</ng-container>
+	<button *ngIf="counter > 0" class="btn round-button" (click)="increaseTime()" [disabled]="timeIncreased">
+		<span>+<i aria-hidden="true"></i></span>
+	</button>
+</body>
+
+</html>

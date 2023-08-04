@@ -1,0 +1,213 @@
+/* Style for the container of all the cards */
+body {
+  background-attachment: fixed;
+  
+}
+.card-container {
+  /* background-color:whitesmoke; */
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0%;
+  margin-bottom: 0%;
+  overflow: scroll;
+ overflow-x: hidden;
+ background-size: cover;
+ background-attachment: fixed;
+}
+.card-deck{
+  display: flex;
+  flex-wrap: wrap;
+  animation: transitionIn 0.75s; 
+  /* background-color: red; */
+
+  
+}
+@keyframes transitionIn {
+	from{
+	  opacity:0;
+	  transform: rotateX(-10deg);
+	}
+	to{
+	  opacity:1;
+	  transform: rotateX(0);
+	}
+	
+  }
+
+.card-body{ 
+  bottom: 20px;
+  width: 200px;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+  
+}
+.card-body:hover{
+  transform: translateY(-10px);
+  background: linear-gradient(45deg,rgb(43, 208, 213),rgb(124, 230, 234));
+}
+
+.card-title{
+  font-family: 'Instrument Serif', serif;
+  /* font-size: 40px; */
+  font-weight: bold;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* font-family: 'Instrument Serif', serif; */
+  /* font-weight: bold; */
+
+}
+
+
+/* Style for each individual card */
+.card {
+  width: 250px;
+  height: 150px;
+  margin: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  margin-top: 50px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size: cover; /* Added */
+  background-position: center; /* Added */
+}
+
+/* .card:hover {
+  transform: scale(1.05);
+} */
+.search-card {
+  background: transparent;
+  /* background-color: aliceblue; */
+  /* width: 90vw; */
+  margin-right: 50px;
+  margin-left: 50px;
+  border-radius: 10px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  border-radius: 100px;
+  margin-top: 50px;
+
+}
+
+.search input{
+  font-family: 20px;
+  height: 40px;
+  border-radius: 15px;
+  width: 800px;
+  height: 45px;
+  background-color: white;
+  border: 2px solid skyblue;
+}
+.search button {
+  margin-left: 15px;
+  background: linear-gradient(45deg,#271E66 ,#1242EB); 
+  border: #469d89;
+  border-radius: 10px;
+  font-size: 28px;
+ padding: 3px 15px; /* adds 10px of padding to the top and bottom, and 20px of padding to the left and right */
+}
+.button:hover {
+  transform: scale(1.1);
+}
+.noresult{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-family: 'Poppins', sans-serif;
+
+}
+/* navbar design */
+.navbar {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  /* background-color: black; */
+
+  height: 100px;
+  width: 1600px;
+  /* position: fixed; */
+  box-shadow: #343a40;
+  /* background-color: #358f80; */
+  
+}
+.navbar h1 {
+  font-size: 40px; /* Set the font size */
+   /* Set the text color */
+  margin: 0; /* Remove any margin */
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  margin-right: 100px;
+
+}
+
+
+.logo {
+	position: absolute;
+	top:-20px;
+	left: -0px;
+	width: 100px;
+	height: 100px;
+  }
+
+
+.container-fluid {
+  max-width: 1200px;
+  margin: auto; /* Center the container horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.search-card h1{
+  
+    font-size: 40px; /* Set the font size */
+    color: 143601; /* Set the text color */
+    margin: 0; /* Remove any margin */
+    font-family: 'Instrument Serif', serif;
+    font-weight: bold;
+    margin-right: 30px;
+
+}
+p{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bolder;
+  line-height: 1.0;
+  font-size: 18px;
+}
+
+h2{
+  font-weight: bold;
+  font-family: 'Source Serif Pro', serif;
+}
+
+
+.disabled-button {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+
+

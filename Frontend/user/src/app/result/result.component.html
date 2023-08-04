@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,300&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<head>
+  <title>Quiz Leaderboard</title>
+  <link rel="stylesheet" href="result.component.css">
+</head>
+<body >
+  .<div class="card-container" style="background-image: url('../assets/1077.jpg'); ">
+    <nav class="navbar">
+      <img src="../assets/quizbg1.png" alt="Quiz Logo" class="logo">
+      <div class="container-fluid">
+        <h1>RESULTS.</h1>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="container1">
+      
+    <div class="correct">
+      <p>Correct Answers:
+         {{correctAnswer}}</p>
+    </div>
+    <div class="name" >
+      <p>You Scored:
+         {{points}}</p>
+    </div>
+    <div class="wrong">
+      <p>Wrong Answers: {{incorrectAnswer}}</p>
+    </div>
+     
+    </div>
+    <br>
+    <br>
+      <div class="card-list">
+        <div class="card-body">
+          <div class="card-header"  >
+            <p>2nd
+              <img src="../assets/2nd.png" alt="2nd" width="40px" height="50px">
+            </p>
+          </div>
+          <p>{{readQuiz[1]?.username}}</p>
+          <p>{{readQuiz[1]?.points}} pts</p>
+
+        </div>
+  
+        <div class="card-body middle-card" >
+          <div class="card-header" >
+            <p>1st
+              <img src="../assets/1st.png" alt="1st" width="40px" height="50px">
+              <!-- 1st -->
+            </p>
+          </div>
+          <p>{{readQuiz[0]?.username}}</p>
+          <p>{{readQuiz[0]?.points}} pts</p>
+        </div>
+        <div class="card-body">
+          <div class="card-header">
+            <p>3rd
+              <img src="../assets/3rd.png" alt="3rd" width="40px" height="50px">
+            </p>
+          </div>
+          <p>{{readQuiz[2]?.username}}</p>
+          <p>{{readQuiz[2]?.points}} pts</p>
+        </div>
+      </div>
+      <br>
+      <button class="tbtn" (click)="toggle()" [hidden]="showtable">See more</button>
+      <div *ngIf="showtable" class="table-container">
+        <br>
+        <h1>Quiz. Leaderboard</h1>
+        <p>Number of participants: {{readQuiz.length }}</p>
+        <br>
+        <div class="row-container1" style="background: transparent;">
+        <div class="row-item">
+          Rank
+        </div>
+        <div class="row-item">
+          Username
+
+        </div>
+        <div class="row-item">
+          Points
+        </div>
+        <div class="row-item">
+          Category
+        </div>
+        <div class="row-item">
+         Difficulty
+        </div>
+      </div>
+        <div *ngFor="let quiz of readQuiz; let i = index" class="row-container">
+       
+          <div class="row-item">
+            <p>{{i+1}}</p>
+          </div>
+          <div class="row-item">
+            <p>{{quiz.username}}</p>
+          </div>
+          <div class="row-item">
+            <p>{{quiz.points}}</p>
+          </div>
+          <div class="row-item">
+            <p>{{quiz.category}}</p>
+          </div>
+          <div class="row-item">
+            <p>{{quiz.difficulty}}</p>
+          </div>
+        </div>
+      </div>
+      <!-- Social media sharing buttons -->
+      <div class="social-media-icons">
+        <h2>share</h2>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{shareUrl}}" target="_blank">
+          <img src="../assets/Facebook.png" class="facebook" alt="Facebook">
+        </a>
+        <a href="https://twitter.com/intent/tweet?url={{shareUrl}}&text=I%20just%20completed%20the%20quiz%20and%20scored%20{{points}}%20points!%20Check%20it%20out." target="_blank">
+          <img src="../assets/twitter.png" class="twitter" alt="Twitter">
+        </a>
+        <!-- Add more social media icons/buttons for other platforms as needed -->
+      </div>
+    </div>
+  </div>
+    </body>
+</html>

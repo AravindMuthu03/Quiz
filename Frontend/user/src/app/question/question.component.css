@@ -1,0 +1,248 @@
+  
+  body {
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgb(0, 128, 128 ,0.3); */
+
+    background: linear-gradient(45deg,#2980B9,#6DD5FA,#FFFFFF);
+  }
+  
+  .ff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .custom-textarea {
+    width: 90%;
+    height: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  
+  .btn:hover {
+    transform: scale(1.03);
+  }
+  
+  
+  
+  .selected {
+    background-color: aquamarine;
+  }
+  
+  .round-button {
+    position: absolute;
+    top: 180px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: bounceButton 1s infinite;
+  }
+  
+  @keyframes bounceButton {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+  }
+  
+  .navbar {
+    width: 1410px;
+    height: 60px;
+    background-color: aliceblue;
+    top: 30px;
+    border-radius: 5px;
+    align-items: center;
+  }
+  
+  .cat {
+    order: 1;
+  }
+  
+  .logo {
+    width: 70px;
+  }
+  
+  .welcome-text {
+    font-style: bold;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    order: 2;
+  }
+  
+  .timer {
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    order: 3;
+    margin-right: 10px;
+  }
+  
+  .card1 {
+    width: 700px;
+    height: 600px;
+    margin-right: 15px;
+    margin-top: 40px;
+    background-color: aliceblue;
+    border-radius: 10px;  
+  }
+  
+  .card1-header {
+    width: 700px;
+    border-radius: 5px; 
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .question-count {
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left: 10px;
+  }
+  
+  .points {
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-right: 10px;
+  }
+  
+  .question {
+    height: 460px;
+    display: flex;
+    border-radius: 10px;
+    background-color: white;
+    
+  }
+  
+  .q {
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Noto Serif', serif;
+  }
+  .img{
+    margin-left: 50px;
+    border-radius: 10px;
+  }
+  
+  .score {
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+    margin-right: 10px;
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .card2 {
+    width: 700px;
+    height: 600px;
+    margin-right: 40px;
+    margin-top: 40px;
+    background-color: aliceblue;
+    border-radius: 10px;
+  }
+  
+  .card2-header {
+    width: 700px;
+    border-radius: 5px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .options-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left: 10px;
+  }
+  .options-text{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    margin-left: 10px;
+  
+  }
+  
+  .option{
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    border-color: #6bd2c1;
+  }
+  .option .card:hover {
+    transform: scale(1.02);
+    
+  }
+  .card {
+    font-size: 16px;
+    width: 600px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 10px;
+  }
+  
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  .button-container{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card.gh {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  p{
+      font-family: 'Source Sans Pro', sans-serif;
+  }
+
+
+
+
