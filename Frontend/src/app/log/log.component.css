@@ -1,0 +1,118 @@
+.formcontrol {
+    width: 1000px;
+    min-height: 100px;
+    font-size: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    margin-bottom: 20px;
+  }
+  .container{
+    margin-top: 30px;
+    width: 1100px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: white;
+border-radius: 10px;
+  }
+
+
+.btn-primary {
+    left: 50%;
+    margin-left: 500px;
+    width: 150px;
+    
+    transform: translateX(-50%);
+   
+}
+.btn-success{
+    bottom: 20px;
+    left: 65%;
+    transform: translateX(-50%);
+}
+.row-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(224, 243, 236);
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 1000px;
+  border-radius: 5px;
+  animation: transitionIn 0.75s;
+  transition: background-color 0.3s ease;
+}
+
+.row-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(224, 243, 236);
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 1000px;
+  border-radius: 5px;
+  animation: transitionIn 0.75s;
+  transition: background-color 0.3s ease;
+}
+
+/* 
+.row-container:hover {
+  background-color: aliceblue;
+  transform: scale(1.02);
+
+} */
+
+
+.row-item {
+  flex: 1;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+
+}
+
+
+.row-item p {
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+}
+
+
+
+p {
+  text-align: center;
+  margin: 1rem;
+  margin: 7px 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+.btn1{
+  background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+
+}

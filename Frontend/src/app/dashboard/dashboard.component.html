@@ -1,0 +1,85 @@
+
+
+<div class="container" >
+  <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;margin: 10px;">User Info</h1>
+  <div *ngIf="names" class="user-container">
+  <button class="bt"  [routerLink]="['/log', ]">Add user</button>
+
+    <div *ngFor="let us of login; let i = index" class="user-card">
+      <button class="card" (click)="user(us.id)">
+        <div class="card-body">
+          <h3 class="card-title">{{ i + 1 }} . {{ us.username }}</h3>
+        </div>
+      </button>
+    </div>
+  </div>
+  <div class="container2" style="position: relative;">
+    <div *ngIf="details" class="details-container">
+      
+      <button (click)="gg()" class="back-button" style="margin-right: -10px;font-family: 'Josefin Sans', sans-serif;
+      font-weight: bold;"> Back </button>
+      <div class="classname">Classname : {{rr?.className}}</div>
+      
+      <div  class="details-card" >
+        <div class="row-container1" style="background: transparent;">
+          <div class="row-item">
+            S.no
+          </div>
+          <div class="row-item">
+            Category
+          </div>
+          <div class="row-item">
+            Difficulty
+          </div>
+          <div class="row-item">
+            Points
+          </div>
+         
+        </div>
+        <div class="row-container" *ngFor="let each of markdata;let i = index">
+        <div class="row-item"> <p>{{i+1}}</p></div>
+          <div class="row-item"> <p>{{each.category}}</p></div>
+            <div class="row-item"> <p>{{each.difficulty}}</p></div>
+              <div class="row-item"> <p>{{each.points}}</p></div>
+              
+
+      </div>
+      </div>
+     
+    </div>
+  </div>
+
+</div>
+  
+
+
+<!-- <div class="row-container1" style="background: transparent;">
+  <div class="row-item">
+    Username
+  </div>
+  <div class="row-item">
+    Score
+
+  </div>
+  <div class="row-item">
+    Category
+  </div>
+  <div class="row-item">
+    Difficulty
+  </div>
+  <div class="row-item">
+   Delete
+  </div>
+</div>
+<div class="row-container" *ngFor="let quiz of readquiz">
+  
+    
+  <div class="row-item"><p>{{ quiz.username }}</p></div>
+  <div class="row-item"><p>{{ quiz.points }}</p></div>
+  <div class="row-item"><p>{{ quiz.category }}</p></div>
+  <div class="row-item"><p>{{ quiz.difficulty }}</p></div>
+  <div class="row-item"><button class="btn" (click)="deleteId(quiz.id)">Delete</button></div>
+        
+        
+      
+  </div> -->

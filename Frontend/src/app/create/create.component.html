@@ -1,0 +1,81 @@
+<div class="container mt-3">
+  <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;margin: 10px;">Create</h1>
+
+  <div class="row text-center">
+    <!-- show error alert -->
+    <div *ngIf="errMsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{errMsg}}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <div *ngIf="successMsg"  class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{successMsg}}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <!-- close error msg -->
+      <div class="option-container">
+      <div class="col">
+        <ckeditor 
+        [editor]="Editor" 
+        data="<h1>write your question here</h1>"
+          name="question"
+          [(ngModel)]="questions" class="queseditor">
+
+        </ckeditor>
+        <!-- <input type="text" [(ngModel)]="questions" class="question" placeholder="Enter the question"/> -->
+<br>
+        <input type="text"[(ngModel)]="images" class="image" placeholder="Enter the Image address"/>
+      </div>
+      <div *ngFor="let option of optionTexts;let i = index" [hidden]="i >=4"> 
+        <textarea  id="option{{i}}" [(ngModel)]="option.option" name="option{{i}}" placeholder="Add option{{i+1}}"></textarea>
+        <button *ngIf="i>=0" (click)="removeOption(i)">Remove option</button>
+      </div>
+    
+    <button class="dd" *ngIf="options.length <5"(click)="addoption()">Add option</button>
+    
+
+    
+    <div *ngFor="let option of optionTexts; let i = index" [hidden]="i < 4">
+      <div class="option-container">
+      
+      
+  
+      <textarea id="option{{i}}" [(ngModel)]="option.option" name="option{{i}}" placeholder="Add Option {{i+1}}"></textarea>
+      <button *ngIf="i>0" (click)="removeOption(i)">Remove option</button>
+      <br>
+      <button class="dd" *ngIf="i === options.length - 1" (click)="addoption()">Add option</button>
+      
+      </div>
+      
+      </div>
+      <div *ngFor="let option of optionTexts;">
+        <input type="text"[(ngModel)]="option.option" class="answer" placeholder="Answer" *ngIf="option.answer === '1'"/>
+      </div>
+      
+        <input type="text" [(ngModel)]="id" class="id" placeholder="Enter the ID for the category" />
+        <input type="text" [(ngModel)]="DIFFID" class="id" placeholder="Enter the difficulty level" />
+      </div>
+       <div class="col-md-4 mt-2" *ngIf="!getparamid" >
+        <!-- <button class="btn btn-primary btn-lg"  (click)="quizSubmit()">Add Quiz</button> -->
+      </div>
+      <!-- <div class="col-md-4 mt-2" *ngIf="getparamid" >
+        <button class="btn btn-success btn-lg"  (click)="updatequiz()">Update Quiz</button>
+      </div>  -->
+
+    <!-- <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th> 
+          <th scope="col">Category</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let categ of cate;">
+          <td>{{categ.id}}</td>
+          <td>{{categ.category}}</td>
+        </tr>
+      </tbody>
+      
+    </table> -->
+  </div>
+</div>

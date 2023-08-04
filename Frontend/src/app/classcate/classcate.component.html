@@ -1,0 +1,67 @@
+<div class="cont" style="margin-top: 30px;width: 1200px;
+display: flex;flex-direction: column;justify-content: center;align-items: center;background-color: white;border-radius: 10px;">
+<div class="container" style="justify-content: end;display: flex;">
+        <button class="btn" [routerLink]="['/allocate/', this.id]">
+        Add Student</button>
+        </div>
+<div *ngIf="names" class="user-container">
+
+<div class="container1">
+
+    
+    <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;margin: 5px;">Category</h1>
+    <div *ngFor="let cat of cate" class="user-card">
+
+        <button class="card" [routerLink]="['/read/', cat?.id]">
+            <div class="card-body" >
+              <h3 class="card-title">{{ cat?.category }}</h3>
+              <br>
+            </div> 
+        </button>
+
+    </div>
+    </div>
+    
+<div class="container2" >
+  
+    <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;margin: 5px;">Userlist</h1>
+   <div *ngFor="let us of user; let i=index" class="user-card">
+  <div class="user-details" (click)="usrr(us.id)">
+    <h3> {{ us.username }}</h3>
+  </div>
+  <button class="delete-button" (click)="deletecon(us.id)">Delete</button>
+</div>
+</div>
+</div>
+<div class="container3">
+    
+    <div *ngIf="details">
+        <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;margin: 10px;">User Info</h1>
+        <div class="gg" class="details-container">
+      <button (click)="gg()" class="back-button" style="margin-left: -10px;"> Back </button>
+      <div  class="details-card" >
+        <div class="row-container1" style="background: transparent;">
+          <div class="row-item">
+            S.no
+          </div>
+          <div class="row-item">
+            Category
+          </div>
+          <div class="row-item">
+            Difficulty
+          </div>
+          <div class="row-item">
+            Points
+          </div>
+        </div>
+        <div class="row-container" *ngFor="let each of markdata;let i = index">
+        <div class="row-item"> <p>{{i+1}}</p></div>
+          <div class="row-item"> <p>{{each.category}}</p></div>
+            <div class="row-item"> <p>{{each.difficulty}}</p></div>
+              <div class="row-item"> <p>{{each.points}}</p></div>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
