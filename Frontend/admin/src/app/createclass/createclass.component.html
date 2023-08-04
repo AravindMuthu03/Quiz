@@ -1,0 +1,36 @@
+<div class="container" style="margin-top: 30px;width: 1100px;
+display: flex;flex-direction: column;justify-content: center;align-items: center;background-color: white;border-radius: 10px;">
+  <h1 style="font-family: 'Josefin Sans', sans-serif;font-weight: bold;margin: 10px;">Add User</h1>
+    <div class="row text-center">
+
+      <!-- show error alert -->
+      
+      <div *ngIf="errMsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>{{errMsg}}</strong> 
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div *ngIf="successMsg"  class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>{{successMsg}}</strong> 
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <!-- close error msg -->
+  
+      <form [formGroup]="userForm" >
+        <div class="col">
+          <input type="text" class="formcontrol"formControlName="classname" placeholder="Enter the classname"/>
+        </div>
+        <div class="col mt-2"*ngIf="!getparamid ">
+          <button class="btn1"(click)="quizSubmit()" routerLink="/classroom">Add Classroom</button>
+        </div>
+        <!-- <div class="col-md-4 mt-2" *ngIf="getparamid">
+          <button class="btn btn-success btn-lg"(click)="updatequiz()">Update Quiz</button>
+        </div> -->
+
+
+      </form>
+     
+  </div>
+</div>
+  
+
+

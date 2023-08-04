@@ -1,0 +1,134 @@
+body{
+    margin-top: 30px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+.add {
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 850px;
+    background-size: cover;
+    margin-top: 20px;
+    padding: 10px 30px;
+}
+
+.btn {
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 5px;
+    background-size: cover;
+    padding: 10px 20px;
+}
+
+.highlight {
+    background-color: rgb(202, 249, 232) ;
+}
+
+
+
+
+textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 700px;
+    height: 50px;
+}
+
+.question {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 500px;
+    height: 50px;
+
+}
+.rr{
+    background: transparent;
+    width: 30px;
+    /* height: 40px; */
+    border-radius: 5px;
+    /* margin-left:710px ; */
+    /* margin-bottom: 0px; */
+}
+
+
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 700px;
+    height: 50px;
+
+}
+
+.answer {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 700px;
+    height: 50px;
+}
+
+.id {
+
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 700px;
+    height: 50px;
+}
+
+.option-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;    
+}
+
+.dd {
+    /* padding: 8px; */
+    /* margin-right: 20px; */
+    width: 100px;
+    height: 30px;
+    margin-bottom: 30px;
+    margin-left: 320px;
+    background: transparent;
+    border-radius: 5px;
+
+}
+
+dd:last-of-type {
+    margin-right: 0;
+
+}
+.button-space {
+    margin-left: 10px; 
+}
+
+
+.catname{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top : 30px;
+    font-family: 'Josefin Sans', sans-serif;
+}

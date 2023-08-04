@@ -1,0 +1,21 @@
+<div class="container" >
+<h1>Categories</h1>
+<button class="bt"  [routerLink]="['/add', ]">Add category</button>
+<div class="card-deck" style="display: flex;">
+
+   
+    <div *ngFor="let course of coursedata">
+        
+        <button class="card" [routerLink]="['/read/', course.id]">
+            <div class="card-body" >
+              <h3 class="card-title">{{ course.category }}</h3>
+
+              <br>
+                
+            </div>            
+        </button>
+        <!-- <button routerLink="['/add/', coursedata.id]">update</button> -->
+            
+    </div>
+</div>
+</div>
